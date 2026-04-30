@@ -1,0 +1,596 @@
+[
+  {
+    "claimId": "CLM-001",
+    "customerId": "CUST-101",
+    "orderId": "ORD-5001",
+    "claimType": "wardrobing",
+    "submittedAt": "2026-04-28T09:15:00Z",
+    "imageUrl": "/mock/damage1.jpg",
+    "receiptUrl": "/mock/receipt1.pdf",
+    "claimValue": 4299,
+    "totalScore": 82,
+    "decision": "deny",
+    "fraudType": "Wardrobing",
+    "signals": {
+      "imageScore": 88,
+      "docScore": 75,
+      "behaviourScore": 91,
+      "carrierScore": 60,
+      "networkScore": 85
+    },
+    "customerExplanation": "We couldn't verify that the item was in the condition described. The photo details don't match our records for this order. Here's how to resubmit: please provide a clear photo of the item with the original tags still attached.",
+    "retailerEvidence": [
+      "EXIF data shows photo taken 18 days after delivery — item worn before return",
+      "Return rate for CUST-101 is 67% (22 returns in 33 orders)",
+      "Same device ID used in Ring #A — 5 confirmed wardrobing accounts",
+      "Receipt font inconsistency detected: mixed printer and system fonts on date field",
+      "Image reverse search: photo found on fashion blog posted 12 days ago"
+    ],
+    "ringId": "RING-A",
+    "reviewPriority": "urgent"
+  },
+  {
+    "claimId": "CLM-002",
+    "customerId": "CUST-102",
+    "orderId": "ORD-5002",
+    "claimType": "inr",
+    "submittedAt": "2026-04-28T10:30:00Z",
+    "imageUrl": null,
+    "receiptUrl": "/mock/receipt2.pdf",
+    "claimValue": 1899,
+    "totalScore": 14,
+    "decision": "approve",
+    "fraudType": null,
+    "signals": {
+      "imageScore": 5,
+      "docScore": 12,
+      "behaviourScore": 18,
+      "carrierScore": 22,
+      "networkScore": 5
+    },
+    "customerExplanation": "Your refund has been approved! ₹1,899 will reach your account within 2 hours. No further action needed.",
+    "retailerEvidence": [
+      "Carrier scan shows no delivery confirmation — GPS pin not captured",
+      "Customer has 2-year account history with 98% clean record",
+      "Trust score: 89/100 — Trusted tier",
+      "No shared device or address flags",
+      "Claim value within normal order range for this customer"
+    ],
+    "ringId": null,
+    "reviewPriority": "low"
+  },
+  {
+    "claimId": "CLM-003",
+    "customerId": "CUST-103",
+    "orderId": "ORD-5003",
+    "claimType": "damaged",
+    "submittedAt": "2026-04-28T11:00:00Z",
+    "imageUrl": "/mock/damage3.jpg",
+    "receiptUrl": "/mock/receipt3.pdf",
+    "claimValue": 6799,
+    "totalScore": 55,
+    "decision": "review",
+    "fraudType": "Possible Wardrobing",
+    "signals": {
+      "imageScore": 60,
+      "docScore": 45,
+      "behaviourScore": 58,
+      "carrierScore": 40,
+      "networkScore": 20
+    },
+    "customerExplanation": "Our team is reviewing your claim and will get back to you within 4 hours. We'll send you an email update. No action needed from your side right now.",
+    "retailerEvidence": [
+      "Photo EXIF location doesn't match delivery address — 12km discrepancy",
+      "Receipt amount matches but merchant name field has different font weight",
+      "Return rate 28% — borderline threshold",
+      "Carrier shows delivery confirmed, signature obtained",
+      "No ring association detected"
+    ],
+    "ringId": null,
+    "reviewPriority": "normal"
+  },
+  {
+    "claimId": "CLM-004",
+    "customerId": "CUST-104",
+    "orderId": "ORD-5004",
+    "claimType": "receipt_issue",
+    "submittedAt": "2026-04-28T11:45:00Z",
+    "imageUrl": "/mock/damage4.jpg",
+    "receiptUrl": "/mock/receipt4.pdf",
+    "claimValue": 12500,
+    "totalScore": 91,
+    "decision": "deny",
+    "fraudType": "Document Fraud",
+    "signals": {
+      "imageScore": 72,
+      "docScore": 98,
+      "behaviourScore": 88,
+      "carrierScore": 85,
+      "networkScore": 95
+    },
+    "customerExplanation": "We couldn't verify the receipt provided. The document details don't match our purchase records for this order. To resubmit: please provide the original receipt email from our platform, or contact support with your order ID ORD-5004.",
+    "retailerEvidence": [
+      "PDF metadata creation date: 2026-04-27, printed date on receipt: 2026-03-15 — 43-day discrepancy",
+      "Font analysis: 3 different font families on single-line receipt — clear editing detected",
+      "Whitespace pixel pattern between date characters is non-uniform — text inserted",
+      "Account CUST-104: 4 receipt fraud claims in 90 days",
+      "Part of Ring #C — 12-member identity fraud ring, ₹1.8L total claimed",
+      "IP history shows VPN rotation across 7 different countries"
+    ],
+    "ringId": "RING-C",
+    "reviewPriority": "urgent"
+  },
+  {
+    "claimId": "CLM-005",
+    "customerId": "CUST-105",
+    "orderId": "ORD-5005",
+    "claimType": "friendly_fraud",
+    "submittedAt": "2026-04-28T12:00:00Z",
+    "imageUrl": "/mock/damage5.jpg",
+    "receiptUrl": "/mock/receipt5.pdf",
+    "claimValue": 3299,
+    "totalScore": 78,
+    "decision": "deny",
+    "fraudType": "Friendly Fraud",
+    "signals": {
+      "imageScore": 65,
+      "docScore": 55,
+      "behaviourScore": 92,
+      "carrierScore": 88,
+      "networkScore": 40
+    },
+    "customerExplanation": "We couldn't confirm this item was not received. Our delivery records show the order was delivered and a signature was collected. To dispute this, please contact our support team with photo ID.",
+    "retailerEvidence": [
+      "Carrier confirms delivery with signature at 14:32 on 2026-04-20 — 8 days before INR claim",
+      "Photo-on-delivery captured — item in transit photo exists",
+      "Customer filed 5 INR claims in last 6 months — all high-value items",
+      "Account age 14 months, but return rate jumped to 45% in last 3 months",
+      "Claim value 4.2x average order value for this account"
+    ],
+    "ringId": null,
+    "reviewPriority": "urgent"
+  },
+  {
+    "claimId": "CLM-006",
+    "customerId": "CUST-106",
+    "orderId": "ORD-5006",
+    "claimType": "damaged",
+    "submittedAt": "2026-04-28T13:00:00Z",
+    "imageUrl": "/mock/damage6.jpg",
+    "receiptUrl": "/mock/receipt6.pdf",
+    "claimValue": 899,
+    "totalScore": 8,
+    "decision": "approve",
+    "fraudType": null,
+    "signals": {
+      "imageScore": 10,
+      "docScore": 8,
+      "behaviourScore": 5,
+      "carrierScore": 15,
+      "networkScore": 0
+    },
+    "customerExplanation": "Your refund has been approved! ₹899 will reach your account within 2 hours. No further action needed.",
+    "retailerEvidence": [
+      "Photo EXIF: taken 1 day after delivery — consistent with damage claim",
+      "Receipt matches order database exactly — no editing detected",
+      "Trust score 94/100 — Trusted tier, 47 clean orders",
+      "First return claim in 3 years — very low risk",
+      "No network flags whatsoever"
+    ],
+    "ringId": null,
+    "reviewPriority": "low"
+  },
+  {
+    "claimId": "CLM-007",
+    "customerId": "CUST-107",
+    "orderId": "ORD-5007",
+    "claimType": "wardrobing",
+    "submittedAt": "2026-04-27T09:00:00Z",
+    "imageUrl": "/mock/damage7.jpg",
+    "receiptUrl": "/mock/receipt7.pdf",
+    "claimValue": 8799,
+    "totalScore": 86,
+    "decision": "deny",
+    "fraudType": "Wardrobing",
+    "signals": {
+      "imageScore": 90,
+      "docScore": 82,
+      "behaviourScore": 88,
+      "carrierScore": 70,
+      "networkScore": 90
+    },
+    "customerExplanation": "We couldn't verify the item was unused. Some details about your submission don't match our records. To resubmit successfully: return the item with all original tags and packaging intact.",
+    "retailerEvidence": [
+      "Web detection: image found on Instagram post from @fashionlover — posted 5 days ago",
+      "EXIF device: iPhone 15 Pro — purchase was a desktop order, delivery address is commercial",
+      "Part of Ring #A — same device fingerprint as 4 other wardrobing accounts",
+      "Return rate: 71% — highest in cohort",
+      "Item tagged as designer — wardrobing pattern matches seasonal return spikes"
+    ],
+    "ringId": "RING-A",
+    "reviewPriority": "urgent"
+  },
+  {
+    "claimId": "CLM-008",
+    "customerId": "CUST-108",
+    "orderId": "ORD-5008",
+    "claimType": "inr",
+    "submittedAt": "2026-04-27T10:00:00Z",
+    "imageUrl": null,
+    "receiptUrl": "/mock/receipt8.pdf",
+    "claimValue": 15800,
+    "totalScore": 79,
+    "decision": "deny",
+    "fraudType": "INR Abuse",
+    "signals": {
+      "imageScore": 50,
+      "docScore": 60,
+      "behaviourScore": 85,
+      "carrierScore": 92,
+      "networkScore": 75
+    },
+    "customerExplanation": "We couldn't confirm this item was not received. Our delivery partner has confirmed delivery at your address. For further assistance, please contact our support team.",
+    "retailerEvidence": [
+      "Carrier GPS scan confirms delivery at exact address — timestamp 11:47",
+      "Signature collected and digitally logged",
+      "Part of Ring #B — rotating address scheme, 8 accounts",
+      "Account created 22 days ago — 3 high-value INR claims already filed",
+      "IP flagged in cross-retailer fraud database"
+    ],
+    "ringId": "RING-B",
+    "reviewPriority": "urgent"
+  },
+  {
+    "claimId": "CLM-009",
+    "customerId": "CUST-109",
+    "orderId": "ORD-5009",
+    "claimType": "damaged",
+    "submittedAt": "2026-04-27T14:00:00Z",
+    "imageUrl": "/mock/damage9.jpg",
+    "receiptUrl": "/mock/receipt9.pdf",
+    "claimValue": 2100,
+    "totalScore": 22,
+    "decision": "approve",
+    "fraudType": null,
+    "signals": {
+      "imageScore": 18,
+      "docScore": 20,
+      "behaviourScore": 25,
+      "carrierScore": 30,
+      "networkScore": 5
+    },
+    "customerExplanation": "Your refund has been approved! ₹2,100 will reach your account within 2 hours. No further action needed.",
+    "retailerEvidence": [
+      "Photo metadata consistent — taken same day as delivery",
+      "Label analysis confirms product damage is authentic",
+      "Customer trust score 76/100 — Good Standing",
+      "2nd return in 18 months — well within acceptable range",
+      "No suspicious network connections"
+    ],
+    "ringId": null,
+    "reviewPriority": "low"
+  },
+  {
+    "claimId": "CLM-010",
+    "customerId": "CUST-110",
+    "orderId": "ORD-5010",
+    "claimType": "other",
+    "submittedAt": "2026-04-27T15:30:00Z",
+    "imageUrl": "/mock/damage10.jpg",
+    "receiptUrl": "/mock/receipt10.pdf",
+    "claimValue": 5400,
+    "totalScore": 47,
+    "decision": "review",
+    "fraudType": "Uncertain",
+    "signals": {
+      "imageScore": 50,
+      "docScore": 40,
+      "behaviourScore": 48,
+      "carrierScore": 52,
+      "networkScore": 30
+    },
+    "customerExplanation": "Our team is reviewing your claim. We'll get back to you within 4 hours via email. No action needed from your side right now.",
+    "retailerEvidence": [
+      "Image forensics inconclusive — metadata partially stripped",
+      "Receipt has minor font inconsistency — could be scanner artifact",
+      "Return rate 24% — within acceptable range but trending up",
+      "Carrier shows delivery attempted, second attempt successful",
+      "No ring association"
+    ],
+    "ringId": null,
+    "reviewPriority": "normal"
+  },
+  {
+    "claimId": "CLM-011",
+    "customerId": "CUST-111",
+    "orderId": "ORD-5011",
+    "claimType": "inr",
+    "submittedAt": "2026-04-26T09:00:00Z",
+    "imageUrl": null,
+    "receiptUrl": "/mock/receipt11.pdf",
+    "claimValue": 22000,
+    "totalScore": 88,
+    "decision": "deny",
+    "fraudType": "INR Abuse + Identity Fraud",
+    "signals": {
+      "imageScore": 70,
+      "docScore": 90,
+      "behaviourScore": 95,
+      "carrierScore": 88,
+      "networkScore": 98
+    },
+    "customerExplanation": "We couldn't verify this claim at this time. Some details need additional confirmation from our team. Please contact support for more information.",
+    "retailerEvidence": [
+      "Account created 8 days ago with premium address — classic identity fraud setup",
+      "Part of Ring #C — 12-member ring, ₹1.8L total claimed, this is claim #9",
+      "Stolen identity detected — name/email combination flagged in external breach database",
+      "PDF receipt: metadata shows edited 4 hours before submission",
+      "IP matches 3 other Ring #C members exactly"
+    ],
+    "ringId": "RING-C",
+    "reviewPriority": "urgent"
+  },
+  {
+    "claimId": "CLM-012",
+    "customerId": "CUST-112",
+    "orderId": "ORD-5012",
+    "claimType": "damaged",
+    "submittedAt": "2026-04-26T11:00:00Z",
+    "imageUrl": "/mock/damage12.jpg",
+    "receiptUrl": "/mock/receipt12.pdf",
+    "claimValue": 1299,
+    "totalScore": 11,
+    "decision": "approve",
+    "fraudType": null,
+    "signals": {
+      "imageScore": 8,
+      "docScore": 10,
+      "behaviourScore": 15,
+      "carrierScore": 12,
+      "networkScore": 0
+    },
+    "customerExplanation": "Your refund has been approved! ₹1,299 will reach your account within 2 hours. No further action needed.",
+    "retailerEvidence": [
+      "All signals clean — photo, receipt, carrier all consistent",
+      "Trust score 88/100 — Trusted tier",
+      "No fraud flags in history",
+      "Claim value well within normal range",
+      "Fast lane approval — 0.8 seconds"
+    ],
+    "ringId": null,
+    "reviewPriority": "low"
+  },
+  {
+    "claimId": "CLM-013",
+    "customerId": "CUST-113",
+    "orderId": "ORD-5013",
+    "claimType": "wardrobing",
+    "submittedAt": "2026-04-25T10:00:00Z",
+    "imageUrl": "/mock/damage13.jpg",
+    "receiptUrl": "/mock/receipt13.pdf",
+    "claimValue": 9899,
+    "totalScore": 73,
+    "decision": "deny",
+    "fraudType": "Wardrobing",
+    "signals": {
+      "imageScore": 80,
+      "docScore": 65,
+      "behaviourScore": 72,
+      "carrierScore": 68,
+      "networkScore": 55
+    },
+    "customerExplanation": "We couldn't verify this item's condition at return. The details provided don't fully match our records. To resubmit: please include original packaging and a video of the item showing the issue.",
+    "retailerEvidence": [
+      "Photo shows item without tags — tags were intact at delivery (photo evidence)",
+      "EXIF: photo taken 25 days after delivery scan",
+      "Return rate 41% — above 30% threshold",
+      "Seasonal pattern: 8 high-value returns in October, 6 in January (event seasons)"
+    ],
+    "ringId": null,
+    "reviewPriority": "urgent"
+  },
+  {
+    "claimId": "CLM-014",
+    "customerId": "CUST-114",
+    "orderId": "ORD-5014",
+    "claimType": "inr",
+    "submittedAt": "2026-04-25T12:00:00Z",
+    "imageUrl": null,
+    "receiptUrl": "/mock/receipt14.pdf",
+    "claimValue": 780,
+    "totalScore": 18,
+    "decision": "approve",
+    "fraudType": null,
+    "signals": {
+      "imageScore": 10,
+      "docScore": 15,
+      "behaviourScore": 20,
+      "carrierScore": 28,
+      "networkScore": 5
+    },
+    "customerExplanation": "Your refund has been approved! ₹780 will reach your account within 2 hours. No further action needed.",
+    "retailerEvidence": [
+      "Carrier scan shows no GPS confirmation — delivery not verified",
+      "Customer trust score 91/100 — Trusted tier",
+      "Very low claim value — no financial incentive for fraud",
+      "First claim in 2 years of account history"
+    ],
+    "ringId": null,
+    "reviewPriority": "low"
+  },
+  {
+    "claimId": "CLM-015",
+    "customerId": "CUST-115",
+    "orderId": "ORD-5015",
+    "claimType": "receipt_issue",
+    "submittedAt": "2026-04-24T09:00:00Z",
+    "imageUrl": "/mock/damage15.jpg",
+    "receiptUrl": "/mock/receipt15.pdf",
+    "claimValue": 18500,
+    "totalScore": 95,
+    "decision": "deny",
+    "fraudType": "Document Fraud + Ring Member",
+    "signals": {
+      "imageScore": 95,
+      "docScore": 99,
+      "behaviourScore": 94,
+      "carrierScore": 90,
+      "networkScore": 98
+    },
+    "customerExplanation": "We couldn't verify the documents submitted. Please contact our support team directly for further assistance.",
+    "retailerEvidence": [
+      "Receipt: 5 different fonts detected — definitively edited document",
+      "PDF creation metadata: 2026-04-24 06:12, but printed date claims 2026-03-01",
+      "Part of Ring #B — account 7 of 8 in rotating-address INR ring",
+      "Image reverse search: stock photo used as damage evidence",
+      "Account linked to 3 flagged devices and 5 delivery addresses in 30 days"
+    ],
+    "ringId": "RING-B",
+    "reviewPriority": "urgent"
+  },
+  {
+    "claimId": "CLM-016",
+    "customerId": "CUST-101",
+    "orderId": "ORD-5016",
+    "claimType": "damaged",
+    "submittedAt": "2026-04-23T10:00:00Z",
+    "imageUrl": "/mock/damage16.jpg",
+    "receiptUrl": "/mock/receipt16.pdf",
+    "claimValue": 3800,
+    "totalScore": 79,
+    "decision": "deny",
+    "fraudType": "Wardrobing (repeat)",
+    "signals": {
+      "imageScore": 82,
+      "docScore": 70,
+      "behaviourScore": 90,
+      "carrierScore": 65,
+      "networkScore": 85
+    },
+    "customerExplanation": "We couldn't verify this claim based on our previous interactions with this account. Please contact support for assistance.",
+    "retailerEvidence": [
+      "Repeat offender — CUST-101 already flagged in CLM-001",
+      "Same device fingerprint as Ring #A members",
+      "Third claim in 30 days from same account",
+      "Photo metadata stripped — no EXIF data available"
+    ],
+    "ringId": "RING-A",
+    "reviewPriority": "urgent"
+  },
+  {
+    "claimId": "CLM-017",
+    "customerId": "CUST-109",
+    "orderId": "ORD-5017",
+    "claimType": "damaged",
+    "submittedAt": "2026-04-22T14:00:00Z",
+    "imageUrl": "/mock/damage17.jpg",
+    "receiptUrl": "/mock/receipt17.pdf",
+    "claimValue": 1650,
+    "totalScore": 19,
+    "decision": "approve",
+    "fraudType": null,
+    "signals": {
+      "imageScore": 15,
+      "docScore": 18,
+      "behaviourScore": 22,
+      "carrierScore": 25,
+      "networkScore": 5
+    },
+    "customerExplanation": "Your refund has been approved! ₹1,650 will reach your account within 2 hours. No further action needed.",
+    "retailerEvidence": [
+      "All signals clean",
+      "Trust score 76/100 — Good Standing",
+      "Photo and receipt fully consistent",
+      "Fast lane eligible"
+    ],
+    "ringId": null,
+    "reviewPriority": "low"
+  },
+  {
+    "claimId": "CLM-018",
+    "customerId": "CUST-113",
+    "orderId": "ORD-5018",
+    "claimType": "friendly_fraud",
+    "submittedAt": "2026-04-21T09:00:00Z",
+    "imageUrl": "/mock/damage18.jpg",
+    "receiptUrl": "/mock/receipt18.pdf",
+    "claimValue": 7200,
+    "totalScore": 66,
+    "decision": "review",
+    "fraudType": "Possible Friendly Fraud",
+    "signals": {
+      "imageScore": 58,
+      "docScore": 62,
+      "behaviourScore": 72,
+      "carrierScore": 70,
+      "networkScore": 40
+    },
+    "customerExplanation": "Our team is reviewing your claim. We'll get back to you within 4 hours via email.",
+    "retailerEvidence": [
+      "Carrier shows delivery confirmed but no signature — ambiguous",
+      "Return rate trending up over 3 months — watch list",
+      "Previous wardrobing pattern — new claim type may indicate strategy shift",
+      "No definitive ring association"
+    ],
+    "ringId": null,
+    "reviewPriority": "normal"
+  },
+  {
+    "claimId": "CLM-019",
+    "customerId": "CUST-115",
+    "orderId": "ORD-5019",
+    "claimType": "inr",
+    "submittedAt": "2026-04-20T10:00:00Z",
+    "imageUrl": null,
+    "receiptUrl": "/mock/receipt19.pdf",
+    "claimValue": 11200,
+    "totalScore": 93,
+    "decision": "deny",
+    "fraudType": "INR Abuse (Ring #B)",
+    "signals": {
+      "imageScore": 60,
+      "docScore": 92,
+      "behaviourScore": 95,
+      "carrierScore": 95,
+      "networkScore": 99
+    },
+    "customerExplanation": "We couldn't verify this claim. Please contact our support team.",
+    "retailerEvidence": [
+      "Carrier: photo-on-delivery captured + GPS confirmation at exact address",
+      "Claim filed 14 days after confirmed delivery",
+      "Ring #B member — 8th claim from this ring cluster",
+      "Account is 18 days old with 4 prior high-value claims"
+    ],
+    "ringId": "RING-B",
+    "reviewPriority": "urgent"
+  },
+  {
+    "claimId": "CLM-020",
+    "customerId": "CUST-106",
+    "orderId": "ORD-5020",
+    "claimType": "damaged",
+    "submittedAt": "2026-04-19T15:00:00Z",
+    "imageUrl": "/mock/damage20.jpg",
+    "receiptUrl": "/mock/receipt20.pdf",
+    "claimValue": 550,
+    "totalScore": 6,
+    "decision": "approve",
+    "fraudType": null,
+    "signals": {
+      "imageScore": 5,
+      "docScore": 5,
+      "behaviourScore": 8,
+      "carrierScore": 10,
+      "networkScore": 0
+    },
+    "customerExplanation": "Your refund has been approved! ₹550 will reach your account within 2 hours. No further action needed.",
+    "retailerEvidence": [
+      "All signals clear — perfect clean claim",
+      "Trust score 94/100",
+      "Fast lane approval — 0.8 seconds",
+      "No flags of any kind"
+    ],
+    "ringId": null,
+    "reviewPriority": "low"
+  }
+]

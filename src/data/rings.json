@@ -1,0 +1,109 @@
+[
+  {
+    "ringId": "RING-A",
+    "name": "The Wardrobe Ring",
+    "detectedAt": "2026-04-28T09:15:00Z",
+    "memberCount": 5,
+    "totalClaimed": 38500,
+    "fraudType": "Wardrobing",
+    "sharedAttribute": "device",
+    "sharedAttributeValue": "DEV-AAA",
+    "status": "confirmed",
+    "members": [
+      { "customerId": "CUST-101", "name": "Riya S.", "claimIds": ["CLM-001", "CLM-016"], "totalClaimed": 8099, "joinedRingAt": "2026-02-15" },
+      { "customerId": "CUST-107", "name": "Meera S.", "claimIds": ["CLM-007"], "totalClaimed": 8799, "joinedRingAt": "2026-02-20" },
+      { "customerId": "CUST-R3", "name": "Aarav K.", "claimIds": ["CLM-R3A"], "totalClaimed": 7200, "joinedRingAt": "2026-03-01" },
+      { "customerId": "CUST-R4", "name": "Nisha P.", "claimIds": ["CLM-R4A"], "totalClaimed": 6800, "joinedRingAt": "2026-03-10" },
+      { "customerId": "CUST-R5", "name": "Raj M.", "claimIds": ["CLM-R5A", "CLM-R5B"], "totalClaimed": 7602, "joinedRingAt": "2026-03-22" }
+    ],
+    "timeline": [
+      { "date": "2026-02-15", "claimId": "CLM-R3A", "customerId": "CUST-R3", "claimValue": 7200, "claimType": "wardrobing", "decision": "review", "connections": [] },
+      { "date": "2026-02-20", "claimId": "CLM-R4A", "customerId": "CUST-R4", "claimValue": 6800, "claimType": "wardrobing", "decision": "approve", "connections": ["CUST-R3"] },
+      { "date": "2026-03-01", "claimId": "CLM-R5A", "customerId": "CUST-R5", "claimValue": 4200, "claimType": "wardrobing", "decision": "approve", "connections": ["CUST-R3", "CUST-R4"] },
+      { "date": "2026-03-10", "claimId": "CLM-R5B", "customerId": "CUST-R5", "claimValue": 3402, "claimType": "wardrobing", "decision": "review", "connections": ["CUST-R3"] },
+      { "date": "2026-04-23", "claimId": "CLM-016", "customerId": "CUST-101", "claimValue": 3800, "claimType": "damaged", "decision": "deny", "connections": ["CUST-R3", "CUST-R4", "CUST-R5"] },
+      { "date": "2026-04-27", "claimId": "CLM-007", "customerId": "CUST-107", "claimValue": 8799, "claimType": "wardrobing", "decision": "deny", "connections": ["CUST-101", "CUST-R3", "CUST-R4"] },
+      { "date": "2026-04-28", "claimId": "CLM-001", "customerId": "CUST-101", "claimValue": 4299, "claimType": "wardrobing", "decision": "deny", "connections": ["CUST-107", "CUST-R3", "CUST-R4", "CUST-R5"] }
+    ],
+    "earlierDetectionPossible": 3,
+    "description": "5 accounts sharing device DEV-AAA submitting wardrobing claims across high-value fashion items. Pattern shows seasonal targeting of designer products."
+  },
+  {
+    "ringId": "RING-B",
+    "name": "The Rotating Address Ring",
+    "detectedAt": "2026-04-27T10:00:00Z",
+    "memberCount": 8,
+    "totalClaimed": 98400,
+    "fraudType": "INR Abuse",
+    "sharedAttribute": "ip_address",
+    "sharedAttributeValue": "RING-B-IP-1",
+    "status": "confirmed",
+    "members": [
+      { "customerId": "CUST-108", "name": "Deepak K.", "claimIds": ["CLM-008"], "totalClaimed": 15800, "joinedRingAt": "2026-04-05" },
+      { "customerId": "CUST-115", "name": "Ring B-7", "claimIds": ["CLM-015", "CLM-019"], "totalClaimed": 29700, "joinedRingAt": "2026-04-07" },
+      { "customerId": "CUST-B3", "name": "Ring B-3", "claimIds": ["CLM-B3A"], "totalClaimed": 14200, "joinedRingAt": "2026-04-08" },
+      { "customerId": "CUST-B4", "name": "Ring B-4", "claimIds": ["CLM-B4A"], "totalClaimed": 12100, "joinedRingAt": "2026-04-09" },
+      { "customerId": "CUST-B5", "name": "Ring B-5", "claimIds": ["CLM-B5A"], "totalClaimed": 9800, "joinedRingAt": "2026-04-10" },
+      { "customerId": "CUST-B6", "name": "Ring B-6", "claimIds": ["CLM-B6A", "CLM-B6B"], "totalClaimed": 8900, "joinedRingAt": "2026-04-11" },
+      { "customerId": "CUST-B7", "name": "Ring B-7b", "claimIds": ["CLM-B7A"], "totalClaimed": 4500, "joinedRingAt": "2026-04-12" },
+      { "customerId": "CUST-B8", "name": "Ring B-8", "claimIds": ["CLM-B8A"], "totalClaimed": 3400, "joinedRingAt": "2026-04-13" }
+    ],
+    "timeline": [
+      { "date": "2026-04-05", "claimId": "CLM-B3A", "customerId": "CUST-B3", "claimValue": 14200, "claimType": "inr", "decision": "approve", "connections": [] },
+      { "date": "2026-04-07", "claimId": "CLM-B4A", "customerId": "CUST-B4", "claimValue": 12100, "claimType": "inr", "decision": "approve", "connections": ["CUST-B3"] },
+      { "date": "2026-04-08", "claimId": "CLM-B5A", "customerId": "CUST-B5", "claimValue": 9800, "claimType": "inr", "decision": "approve", "connections": ["CUST-B3", "CUST-B4"] },
+      { "date": "2026-04-09", "claimId": "CLM-B6A", "customerId": "CUST-B6", "claimValue": 5200, "claimType": "inr", "decision": "review", "connections": ["CUST-B3", "CUST-B4", "CUST-B5"] },
+      { "date": "2026-04-10", "claimId": "CLM-B6B", "customerId": "CUST-B6", "claimValue": 3700, "claimType": "inr", "decision": "review", "connections": ["CUST-B5"] },
+      { "date": "2026-04-11", "claimId": "CLM-B7A", "customerId": "CUST-B7", "claimValue": 4500, "claimType": "inr", "decision": "deny", "connections": ["CUST-B3", "CUST-B4", "CUST-B5", "CUST-B6"] },
+      { "date": "2026-04-12", "claimId": "CLM-B8A", "customerId": "CUST-B8", "claimValue": 3400, "claimType": "inr", "decision": "deny", "connections": ["CUST-B6", "CUST-B7"] },
+      { "date": "2026-04-20", "claimId": "CLM-019", "customerId": "CUST-115", "claimValue": 11200, "claimType": "inr", "decision": "deny", "connections": ["CUST-108", "CUST-B3", "CUST-B4"] },
+      { "date": "2026-04-24", "claimId": "CLM-015", "customerId": "CUST-115", "claimValue": 18500, "claimType": "receipt_issue", "decision": "deny", "connections": ["CUST-108", "CUST-B3", "CUST-B4", "CUST-B5", "CUST-B6"] },
+      { "date": "2026-04-27", "claimId": "CLM-008", "customerId": "CUST-108", "claimValue": 15800, "claimType": "inr", "decision": "deny", "connections": ["CUST-115", "CUST-B3", "CUST-B4", "CUST-B5", "CUST-B6", "CUST-B7", "CUST-B8"] }
+    ],
+    "earlierDetectionPossible": 3,
+    "description": "8 accounts coordinating INR abuse with rotating delivery addresses. All accounts share IP fingerprint RING-B-IP-1. Created within 9 days of each other."
+  },
+  {
+    "ringId": "RING-C",
+    "name": "The Identity Theft Ring",
+    "detectedAt": "2026-04-26T09:00:00Z",
+    "memberCount": 12,
+    "totalClaimed": 185600,
+    "fraudType": "Identity Fraud + Document Fraud",
+    "sharedAttribute": "address",
+    "sharedAttributeValue": "Premium Address Cluster C",
+    "status": "confirmed",
+    "members": [
+      { "customerId": "CUST-104", "name": "Vikram J. (stolen ID)", "claimIds": ["CLM-004"], "totalClaimed": 12500, "joinedRingAt": "2026-03-01" },
+      { "customerId": "CUST-111", "name": "Stolen ID #9", "claimIds": ["CLM-011"], "totalClaimed": 22000, "joinedRingAt": "2026-04-15" },
+      { "customerId": "CUST-C3", "name": "Stolen ID #3", "claimIds": ["CLM-C3A", "CLM-C3B"], "totalClaimed": 28000, "joinedRingAt": "2026-03-05" },
+      { "customerId": "CUST-C4", "name": "Stolen ID #4", "claimIds": ["CLM-C4A"], "totalClaimed": 15200, "joinedRingAt": "2026-03-08" },
+      { "customerId": "CUST-C5", "name": "Stolen ID #5", "claimIds": ["CLM-C5A"], "totalClaimed": 18500, "joinedRingAt": "2026-03-10" },
+      { "customerId": "CUST-C6", "name": "Stolen ID #6", "claimIds": ["CLM-C6A", "CLM-C6B"], "totalClaimed": 24100, "joinedRingAt": "2026-03-15" },
+      { "customerId": "CUST-C7", "name": "Stolen ID #7", "claimIds": ["CLM-C7A"], "totalClaimed": 11400, "joinedRingAt": "2026-03-20" },
+      { "customerId": "CUST-C8", "name": "Stolen ID #8", "claimIds": ["CLM-C8A"], "totalClaimed": 9800, "joinedRingAt": "2026-03-22" },
+      { "customerId": "CUST-C9", "name": "Stolen ID #10", "claimIds": ["CLM-C9A"], "totalClaimed": 14200, "joinedRingAt": "2026-04-01" },
+      { "customerId": "CUST-C10", "name": "Stolen ID #11", "claimIds": ["CLM-C10A"], "totalClaimed": 11500, "joinedRingAt": "2026-04-05" },
+      { "customerId": "CUST-C11", "name": "Stolen ID #12", "claimIds": ["CLM-C11A"], "totalClaimed": 9900, "joinedRingAt": "2026-04-08" },
+      { "customerId": "CUST-C12", "name": "Stolen ID #13", "claimIds": ["CLM-C12A"], "totalClaimed": 8500, "joinedRingAt": "2026-04-12" }
+    ],
+    "timeline": [
+      { "date": "2026-03-01", "claimId": "CLM-C3A", "customerId": "CUST-C3", "claimValue": 15000, "claimType": "receipt_issue", "decision": "approve", "connections": [] },
+      { "date": "2026-03-05", "claimId": "CLM-C4A", "customerId": "CUST-C4", "claimValue": 15200, "claimType": "inr", "decision": "approve", "connections": ["CUST-C3"] },
+      { "date": "2026-03-08", "claimId": "CLM-C5A", "customerId": "CUST-C5", "claimValue": 18500, "claimType": "receipt_issue", "decision": "approve", "connections": ["CUST-C3", "CUST-C4"] },
+      { "date": "2026-03-10", "claimId": "CLM-C6A", "customerId": "CUST-C6", "claimValue": 12000, "claimType": "friendly_fraud", "decision": "review", "connections": ["CUST-C3", "CUST-C4"] },
+      { "date": "2026-03-01", "claimId": "CLM-004", "customerId": "CUST-104", "claimValue": 12500, "claimType": "receipt_issue", "decision": "deny", "connections": ["CUST-C3", "CUST-C4", "CUST-C5", "CUST-C6"] },
+      { "date": "2026-03-15", "claimId": "CLM-C6B", "customerId": "CUST-C6", "claimValue": 12100, "claimType": "inr", "decision": "deny", "connections": ["CUST-104", "CUST-C3"] },
+      { "date": "2026-03-20", "claimId": "CLM-C7A", "customerId": "CUST-C7", "claimValue": 11400, "claimType": "inr", "decision": "deny", "connections": ["CUST-104", "CUST-C6"] },
+      { "date": "2026-03-22", "claimId": "CLM-C8A", "customerId": "CUST-C8", "claimValue": 9800, "claimType": "inr", "decision": "deny", "connections": ["CUST-C7"] },
+      { "date": "2026-03-05", "claimId": "CLM-C3B", "customerId": "CUST-C3", "claimValue": 13000, "claimType": "wardrobing", "decision": "deny", "connections": ["CUST-C4", "CUST-C5"] },
+      { "date": "2026-04-01", "claimId": "CLM-C9A", "customerId": "CUST-C9", "claimValue": 14200, "claimType": "receipt_issue", "decision": "deny", "connections": ["CUST-C3", "CUST-C4", "CUST-C5"] },
+      { "date": "2026-04-05", "claimId": "CLM-C10A", "customerId": "CUST-C10", "claimValue": 11500, "claimType": "inr", "decision": "deny", "connections": ["CUST-111", "CUST-C9"] },
+      { "date": "2026-04-08", "claimId": "CLM-C11A", "customerId": "CUST-C11", "claimValue": 9900, "claimType": "inr", "decision": "deny", "connections": ["CUST-C10"] },
+      { "date": "2026-04-12", "claimId": "CLM-C12A", "customerId": "CUST-C12", "claimValue": 8500, "claimType": "friendly_fraud", "decision": "deny", "connections": ["CUST-C10", "CUST-C11"] },
+      { "date": "2026-04-26", "claimId": "CLM-011", "customerId": "CUST-111", "claimValue": 22000, "claimType": "inr", "decision": "deny", "connections": ["CUST-104", "CUST-C3", "CUST-C4", "CUST-C5", "CUST-C6", "CUST-C7"] }
+    ],
+    "earlierDetectionPossible": 2,
+    "description": "12-account stolen identity ring operating with premium delivery addresses. Mixed fraud types including document fraud and INR abuse. Total ₹1.86L claimed across 14 claims."
+  }
+]

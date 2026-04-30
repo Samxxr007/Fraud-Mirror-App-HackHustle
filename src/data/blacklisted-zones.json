@@ -1,0 +1,7 @@
+[
+  { "area": "Dharavi", "pincode": "400017", "city": "Mumbai", "riskLevel": "high", "reason": "High return ring activity" },
+  { "area": "Shivaji Nagar", "pincode": "411005", "city": "Pune", "riskLevel": "high" },
+  { "area": "Ulhasnagar", "pincode": "421003", "city": "Thane", "riskLevel": "high" },
+  { "area": "Sadar Bazar", "pincode": "110006", "city": "Delhi", "riskLevel": "medium" },
+  { "area": "Govindpuri", "pincode": "110019", "city": "Delhi", "riskLevel": "medium" }
+]
