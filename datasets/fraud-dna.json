@@ -1,0 +1,112 @@
+[
+  {
+    "dnaId": "DNA-001",
+    "patternId": "FP-7A3B9C",
+    "label": "Serial Wardrobing Pattern",
+    "patternFamily": "Wardrobing",
+    "lastSeen": "2026-04-28T09:15:00Z",
+    "matchScore": 94,
+    "frequency": 47,
+    "signals": { "image": 88, "document": 72, "behaviour": 91, "carrier": 60, "network": 85 },
+    "description": "High image manipulation + extremely high behaviour score. Classic serial wardrobing with ring affiliation."
+  },
+  {
+    "dnaId": "DNA-002",
+    "patternId": "FP-2D8E1F",
+    "label": "Clean Legitimate Claim",
+    "patternFamily": "Legitimate",
+    "lastSeen": "2026-04-28T10:30:00Z",
+    "matchScore": 12,
+    "frequency": 312,
+    "signals": { "image": 5, "document": 12, "behaviour": 18, "carrier": 22, "network": 5 },
+    "description": "All signals low. Trusted customer with clean history. Fast lane eligible."
+  },
+  {
+    "dnaId": "DNA-003",
+    "patternId": "FP-5F2A4D",
+    "label": "Document Forgery Elite",
+    "patternFamily": "Document Fraud",
+    "lastSeen": "2026-04-28T11:45:00Z",
+    "matchScore": 98,
+    "frequency": 18,
+    "signals": { "image": 72, "document": 99, "behaviour": 88, "carrier": 85, "network": 95 },
+    "description": "Near-perfect document forgery score. Font inconsistency + PDF metadata mismatch. Part of organised ring."
+  },
+  {
+    "dnaId": "DNA-004",
+    "patternId": "FP-9C6B7E",
+    "label": "INR Delivery Override",
+    "patternFamily": "INR Abuse",
+    "lastSeen": "2026-04-27T10:00:00Z",
+    "matchScore": 87,
+    "frequency": 63,
+    "signals": { "image": 50, "document": 60, "behaviour": 85, "carrier": 92, "network": 75 },
+    "description": "Strong carrier signal (confirmed delivery) with high behaviour anomaly. Classic INR despite delivery proof."
+  },
+  {
+    "dnaId": "DNA-005",
+    "patternId": "FP-3A1C8F",
+    "label": "New Account High Value",
+    "patternFamily": "Account Fraud",
+    "lastSeen": "2026-04-26T09:00:00Z",
+    "matchScore": 91,
+    "frequency": 29,
+    "signals": { "image": 70, "document": 90, "behaviour": 95, "carrier": 88, "network": 98 },
+    "description": "Account < 30 days old, immediate high-value claims, perfect network ring match."
+  },
+  {
+    "dnaId": "DNA-006",
+    "patternId": "FP-6D4E2A",
+    "label": "Seasonal Wardrobing",
+    "patternFamily": "Wardrobing",
+    "lastSeen": "2026-04-25T10:00:00Z",
+    "matchScore": 78,
+    "frequency": 34,
+    "signals": { "image": 80, "document": 65, "behaviour": 72, "carrier": 68, "network": 55 },
+    "description": "Photo taken weeks after delivery. Seasonal return spike pattern around events/festivals."
+  },
+  {
+    "dnaId": "DNA-007",
+    "patternId": "FP-1B9F3C",
+    "label": "Friendly Fraud Career",
+    "patternFamily": "Friendly Fraud",
+    "lastSeen": "2026-04-28T12:00:00Z",
+    "matchScore": 82,
+    "frequency": 41,
+    "signals": { "image": 65, "document": 55, "behaviour": 92, "carrier": 88, "network": 40 },
+    "description": "Confirmed delivery + high behaviour anomaly. Multiple prior INR claims. Graduated from isolated to career fraud."
+  },
+  {
+    "dnaId": "DNA-008",
+    "patternId": "FP-4E7A9B",
+    "label": "VPN Ring Coordinator",
+    "patternFamily": "Organised Fraud",
+    "lastSeen": "2026-04-26T09:00:00Z",
+    "matchScore": 96,
+    "frequency": 8,
+    "signals": { "image": 95, "document": 99, "behaviour": 94, "carrier": 90, "network": 98 },
+    "description": "All signals extremely high. VPN rotation detected. Ring coordinator profile — orchestrates multiple accounts."
+  },
+  {
+    "dnaId": "DNA-009",
+    "patternId": "FP-8C2D5F",
+    "label": "Borderline Review Case",
+    "patternFamily": "Uncertain",
+    "lastSeen": "2026-04-28T11:00:00Z",
+    "matchScore": 55,
+    "frequency": 89,
+    "signals": { "image": 60, "document": 45, "behaviour": 58, "carrier": 40, "network": 20 },
+    "description": "Mixed signals across all dimensions. Human review recommended. Could be legitimate edge case."
+  },
+  {
+    "dnaId": "DNA-010",
+    "patternId": "FP-0F1E3D",
+    "label": "Trusted Elite Customer",
+    "patternFamily": "Legitimate",
+    "lastSeen": "2026-04-28T13:00:00Z",
+    "matchScore": 7,
+    "frequency": 528,
+    "signals": { "image": 5, "document": 5, "behaviour": 8, "carrier": 10, "network": 0 },
+    "description": "Near-zero across all signals. Account age 3+ years, consistent address, low claim history. Exemplar legitimate customer."
+  }
+]
